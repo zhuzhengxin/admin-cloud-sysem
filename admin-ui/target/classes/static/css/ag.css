@@ -1,0 +1,8 @@
+.select2-container{
+    z-index: 999999999;
+}
+
+.columndiv{float: left;text-align: center;width: auto;background-color: white;margin-left: 10px;height: 35px;line-height: 35px;border: 1px solid  #737373;}
+.columndiv1{background:url(../images/susp-ckb_1.png) right bottom #fff no-repeat;float: left;text-align: center;width: auto;background-color: white;margin-left: 10px;height: 35px;line-height: 35px;border: 1px solid  #FF6600;}
+.columndiv2{float: left;text-align: center;width: auto;background-color: white;margin-left: 10px;height: 35px;line-height: 35px;border: 1px solid  #737373;}
+.new_input_line{width: 93px;height:38px;border:1px solid #e4e4e4;}

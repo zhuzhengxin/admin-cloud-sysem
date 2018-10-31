@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pers.liuqing.cloudsys.admin.service.mapper.ContractinfoMapper" >
+  <resultMap id="BaseResultMap" type="pers.liuqing.cloudsys.admin.service.entity.Contractinfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="contract_no" property="contractNo" jdbcType="VARCHAR" />
+    <result column="contract_name" property="contractName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

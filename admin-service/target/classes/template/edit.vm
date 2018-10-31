@@ -1,0 +1,17 @@
+
+		<div style="margin: 15px;">
+			<form class="layui-form" action="">
+		#foreach($column in $columns)
+			#if($!column.editFlag.equals("Y"))
+			#else
+                <div class="layui-form-item">
+                    <label class="layui-form-label">$!column.column_comment</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="$!column.column_name" lay-verify="required" placeholder="请输入$!column.column_comment" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+			#end
+		#end
+				<button lay-filter="edit" lay-submit style="display: none;"></button>
+			</form>
+		</div>

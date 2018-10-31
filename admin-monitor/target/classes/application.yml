@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: admin-monitor
+    boot:
+      admin:
+        url: http://localhost:8764/
+    jackson:
+        serialization:
+            indent_output: true
+endpoints:
+    health:
+       sensitive: false
+
+server:
+    port: 8764 #启动端口
+
+security:
+    user:
+        name: whb
+        password: 123456
+        role: USER

@@ -1,0 +1,6 @@
+pers\liuqing\cloudsys\admin\ui\rpc\HystrixClientFallback.class
+pers\liuqing\cloudsys\admin\ui\controller\UserPermissionController.class
+pers\liuqing\cloudsys\admin\ui\config\WebConfig.class
+pers\liuqing\cloudsys\admin\ui\UIBootstrap.class
+pers\liuqing\cloudsys\admin\ui\rpc\IUserService.class
+pers\liuqing\cloudsys\admin\ui\controller\HomeController.class

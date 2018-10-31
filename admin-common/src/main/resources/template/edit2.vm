@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="/admin/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="/admin/css/global.css" media="all">
+    <link rel="stylesheet" href="/admin/plugins/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+		<div style="margin: 15px;">
+			<form class="layui-form" action="">
+		#foreach($column in $columns)
+			#if($!column.editFlag.equals("Y")&&$!column.dataType.equals("date"))
+                <div class="layui-form-item">
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" name="$!column.columnName" id="$!column.column_name" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" onclick="layui.laydate({elem: this})">
+                    </div>
+                </div>
+
+            #elseif($!column.editFlag.equals("Y")&&$!column.dataType.equals("datetime"))
+                <div class="layui-form-item">
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" name="$!column.columnName" id="$!column.columnName" lay-verify="date" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" onclick="layui.laydate({elem: this})">
+                    </div>
+                </div>
+            #elseif($!column.editFlag.equals("Y")&&$!column.dataType!="date"&&$!column.dataType!="datetime")
+                <div class="layui-form-item">
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="$!column.columnName" size="$!column.characterMaximumLength" lay-verify="required" placeholder="请输入$!column.columnComment" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            #end
+		#end
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="edit">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+			</form>
+		</div>
+<script type="text/javascript" src="/admin/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/admin/layui/layui.all.js"></script>
+<script type="text/javascript" src="/admin/ag/common/util.js"></script>
+<script type="text/javascript" src="/admin/ag/${model}/${model}add.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+		<div style="margin: 15px;">
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+                    <label class="layui-form-label">表名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="tabname" lay-verify="required" placeholder="请输入表名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">描述</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="tabdesc" lay-verify="required" placeholder="请输入描述" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">代码生成路径</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="generatedir" lay-verify="required" value="D:/geek_qi-ace-security-master/ace-security/" placeholder="请输入代码生成路径" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+				<div class="layui-form-item">
+                    <label class="layui-form-label">程序生成标记</label>
+                    <div class="layui-input-block">
+                        <select id="generated" name="generated" lay-verify="required" lay-search="">
+                            <option value="">请选择</option>
+                            <option value="N">未生成</option>
+                            <option value="Y">已生成</option>
+                        </select>
+                    </div>
+                </div>
+
+
+									<button lay-filter="edit" lay-submit style="display: none;"></button>
+			</form>
+		</div>

@@ -1,0 +1,60 @@
+package ${package_name}.rest;
+
+import com.github.pagehelper.PageHelper;
+import ${package_name}.dao.${model}Dao;
+import ${package_name}.entity.${model};
+import pers.liuqing.cloudsys.admin.common.msg.TableResultResponse2;
+import pers.liuqing.cloudsys.admin.common.rest.BaseController;
+import pers.liuqing.cloudsys.admin.common.msg.ListRestResponse;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import tk.mybatis.mapper.entity.Example;
+
+/**
+ * ${model}controller
+ * Created by liuqinga on ${ctime}.
+ */
+@Controller
+@RequestMapping("${url}")
+public class ${model}Controller extends BaseController<${model}Dao,${model}> {
+    @RequestMapping(value = "/page",method = RequestMethod.GET)
+    @ResponseBody
+    public TableResultResponse2<${model}> page(@RequestParam(defaultValue = "10") int limit,@RequestParam(defaultValue = "1")int offset,#foreach($column in $columns) #if($!column.queryFlag.equals("Y")) String $!column.columnName, #end #end String id){
+            Example example = new Example(${model}.class);
+            #foreach($column in $columns)
+            #if($!column.queryFlag.equals("Y")&&$!column.queryKind.equals("like")){
+            if(StringUtils.isNotBlank($!column.columnName)) {
+            example.createCriteria().andLike("$!column.columnName", "%" + $!column.columnName + "%");
+            }
+            }
+            #end
+            #if($!column.queryFlag.equals("Y")&&$!column.queryKind.equals("=")){
+            if(StringUtils.isNotBlank($!column.columnName)) {
+            example.createCriteria().andEqualTo("$!column.columnName",$!column.columnName);
+            }
+            }
+            #end
+            #if($!column.queryFlag.equals("Y")&&$!column.queryKind.equals("between")&&($!column.dataType.equals("date")||$!column.dataType.equals("datetime"))){
+                #set($splitmsg = '" - "' )
+                #set($columnName3 = $!column.columnName + ".split("+$splitmsg+")[0]")
+                #set($columnName4 = $!column.columnName + ".split("+$splitmsg+")[1]")
+            if(StringUtils.isNotBlank($!column.columnName)) {
+               example.createCriteria().andBetween("$!column.columnName",$columnName3,$columnName4);
+            }
+            }
+            #end
+            #if($!column.queryFlag.equals("Y")&&$!column.queryKind.equals("between")&&$!column.dataType!="date"&&$!column.dataType!="datetime"){
+                    #set($columnName1 = $!column.columnName + 1)
+                    #set($columnName2 = $!column.columnName + 2)
+            if(StringUtils.isNotBlank($columnName1)&&StringUtils.isNotBlank($columnName2)) {
+                example.createCriteria().andBetween("$!column.columnName",$columnName1,$columnName2);
+            }
+            }
+            #end
+            #end
+            int count = baseDao.selectCountByExample(example);
+            PageHelper.startPage(offset, limit);
+            return new TableResultResponse2<${model}>(count,0,"",baseDao.selectByExample(example));
+       }
+}

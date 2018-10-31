@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="plugins/bootstrap-table/css/bootstrap-table.min.css"/>
+    <link rel="stylesheet" href="css/layui.css" media="all"/>
+    <link rel="stylesheet" href="css/global.css" media="all">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="admin-main">
+    <form  class="layui-form layui-form-pane" onsubmit="javascript:return false;">
+        <div class="layui-form-item" style="margin-bottom:0px;">
+
+
+                     <label class="layui-form-label">表名</label>
+            <div class="layui-input-inline">
+                <input type="text" onchange="javascript:$('#btn_query').click();" class="layui-input"  id="tabname">
+            </div>
+                     <label class="layui-form-label">描述</label>
+            <div class="layui-input-inline">
+                <input type="text" onchange="javascript:$('#btn_query').click();" class="layui-input"  id="tabdesc">
+            </div>
+
+
+                     <label class="layui-form-label">程序生成标记</label>
+            <div class="layui-input-inline">
+                <select id="generated" name="module" lay-verify="required" lay-search="">
+                    <option value="">请选择</option>
+                    <option value="Y">已生成</option>
+                    <option value="N">未生成</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-bottom:0px;">
+                     <label class="layui-form-label">开始时间</label>
+            <div class="layui-input-inline">
+                <input type="text" onchange="javascript:$('#btn_query').click();" class="layui-input"  id="begintime" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" onclick="layui.laydate({elem: this})">
+            </div>
+            <label class="layui-form-label">结束时间</label>
+            <div class="layui-input-inline">
+                <input type="text" onchange="javascript:$('#btn_query').click();" class="layui-input"  id="endtime" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" onclick="layui.laydate({elem: this})">
+            </div>
+                     <button type="button" id="btn_query"  class="layui-btn layui-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+        </div>
+    </form>
+    <script type="text/html" id="tpl">
+        {{# layui.each(d.list, function(index, item){ }}
+
+        {{# }); }}
+    </script>
+    <div  id="toolbar" class="layui-btn-group">
+        <button class="layui-btn layui-btn-small" id="btn_add">
+            <i class="layui-icon">&#xe654;</i>
+        </button>
+        <button class="layui-btn layui-btn-small" id="btn_edit">
+            <i class="layui-icon">&#xe642;</i>
+        </button>
+        <button class="layui-btn layui-btn-small" id="btn_del">
+            <i class="layui-icon">&#xe640;</i>
+        </button>
+        <button class="layui-btn layui-btn-small" id="btn_gen">生成代码</button>
+    </div>
+    <table id="generateTable">
+
+    </table>
+
+</div>
+
+<script type="text/javascript" src="plugins/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="layui.js"></script>
+<script type="text/javascript" src="ag/common/util.js"></script>
+<script type="text/javascript" src="ag/generate/generate.js"></script>
+</body>
+
+</html>

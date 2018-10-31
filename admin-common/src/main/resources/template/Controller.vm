@@ -1,0 +1,49 @@
+package ${package_name}.rest;
+
+import com.github.pagehelper.PageHelper;
+import ${package_name}.dao.${model}Dao;
+import ${package_name}.entity.${model};
+import pers.liuqing.cloudsys.admin.common.msg.TableResultResponse;
+import pers.liuqing.cloudsys.admin.common.rest.BaseController;
+import pers.liuqing.cloudsys.admin.common.msg.ListRestResponse;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import tk.mybatis.mapper.entity.Example;
+
+/**
+ * ${model}controller
+ * Created by liuqinga on ${ctime}.
+ */
+@Controller
+@RequestMapping("${url}")
+public class ${model}Controller extends BaseController<${model}Dao,${model}> {
+    @RequestMapping(value = "/page",method = RequestMethod.GET)
+    @ResponseBody
+    public TableResultResponse<${model}> page(@RequestParam(defaultValue = "10") int limit,@RequestParam(defaultValue = "1")int offset,#foreach($column in $columns) #if($columnscount.equals($velocityCount)) String $!column.column_name #else String $!column.column_name,#end #end){
+        Example example = new Example(${model}.class);
+        #foreach($column in $columns)
+        #if($!column.queryFlag.equals("Y")&&$!column.queryKind.equals("like")){
+        if(StringUtils.isNotBlank($!column.column_name)) {
+          example.createCriteria().andLike("$!column.column_name", "%" + $!column.column_name + "%");
+        }
+        }
+        #end
+        #if($!column.queryFlag.equals("Y")&&$!column.queryKind.equals("=")){
+        if(StringUtils.isNotBlank($!column.column_name)) {
+        example.createCriteria().andEqualTo("$!column.column_name",$!column.column_name);
+        }
+        }
+        #end
+        #if($!column.queryFlag.equals("Y")&&$!column.queryKind.equals("between")){
+        if(StringUtils.isNotBlank($!column.column_name)) {
+        example.createCriteria().andBetween("$!column.column_name",$!column.column_name+"1",,$!column.column_name+"2");
+        }
+        }
+        #end
+        #end
+        int count = baseDao.selectCountByExample(example);
+        PageHelper.startPage(offset, limit);
+        return new TableResultResponse<${model}>(count,baseDao.selectByExample(example));
+       }
+}

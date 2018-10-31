@@ -1,0 +1,14 @@
+package ${package_name}.dao;
+
+import pers.liuqing.cloudsys.admin.common.dao.BaseDao;
+import ${package_name}.entity.${model};
+import ${package_name}.mapper.${model}Mapper;
+import org.springframework.stereotype.Service;
+/**
+* ${model}Dao
+* Created by liuqinga on ${ctime}.
+*/
+@Service
+public class ${model}Dao extends BaseDao<${model}Mapper,${model}> {
+
+}

@@ -1,0 +1,6 @@
+com\github\wxiaoqi\security\ui\config\WebConfig.class
+com\github\wxiaoqi\security\ui\rpc\HystrixClientFallback.class
+com\github\wxiaoqi\security\ui\controller\UserPermissionController.class
+com\github\wxiaoqi\security\ui\rpc\IUserService.class
+com\github\wxiaoqi\security\ui\BlogUIBootstrap.class
+com\github\wxiaoqi\security\ui\controller\HomeController.class

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:tiles="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>后台管理系统</title>
+
+
+	<link title="orange" href="css/login.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div style="height:1px;"></div>
+<div class="login">
+	<header>
+		<h1>登录</h1>
+	</header>
+	<div class="sr">
+		<form th:action="@{/login}"method="POST">
+			<div th:if="${param.error}" class="alert alert-error">
+				Invalid username and password.
+			</div>
+			<div th:if="${param.logout}" class="alert alert-success">
+				You have been logged out.
+			</div>
+			<div class="name">
+				<input type="text"  placeholder="这里输入登录名" class="name_inp" name="username">
+			</div>
+			<div class="name">
+
+				<input  placeholder="这里输入登录密码" type="password" name="password" class="name_inp">
+			</div>
+			<button  type="submit" class="dl">登录</button>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
+    <h1>登录页面</h1>
+
+    <form class="form" th:action="@{/login}" method="post">
+            <div th:if="${param.error}" class="alert alert-error">
+            Invalid username and password.
+            </div>
+            <div th:if="${param.logout}" class="alert alert-success">
+            You have been logged out.
+           </div>
+        <input type="text" name="username" autofocus placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit" id="login-button">登录</button>
+    </form>
+</div>
+
+<ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+</div>
+
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+$('#login-button').click(function (event) {
+$('form').fadeOut(200);
+$('.wrapper').addClass('form-success');
+});
+</script>-->
+</body>
+</html>

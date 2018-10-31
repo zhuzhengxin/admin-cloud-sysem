@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="plugins/bootstrap-table/css/bootstrap-table.min.css"/>
+    <link rel="stylesheet" href="css/layui.css" media="all"/>
+    <link rel="stylesheet" href="css/global.css" media="all">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ag.css" media="all"/>
+</head>
+
+<body>
+<div class="admin-main">
+    <form  class="layui-form layui-form-pane" onsubmit="javascript:return false;">
+        <input type="hidden" name="generated" id="generated"/>
+        <input type="hidden" name="tableName1" id="tableName1"/>
+    </form>
+
+    <div   class="layui-btn-group">
+      <!--  <button class="layui-btn layui-btn-small" id="btn_add">
+            <i class="layui-icon">&#xe654;</i>
+        </button>-->
+
+      <!--  <button class="layui-btn layui-btn-small" id="btn_del">
+            <i class="layui-icon">&#xe640;</i>
+        </button>-->
+        <button class="layui-btn layui-btn-small" id="btn_gen">自动生成代码</button>
+    </div>
+
+
+    <table id="colunmsTable">
+
+    </table>
+    <div style="border: 1px solid #c2c2c2;display: none;white-space: pre-wrap;" id="result">
+
+    </div>
+
+</div>
+
+
+
+</body>
+
+</html>

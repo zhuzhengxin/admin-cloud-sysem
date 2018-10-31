@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="plugins/bootstrap-table/css/bootstrap-table.min.css"/>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="css/global.css" media="all">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ag.css">
+</head>
+
+<body>
+<div class="admin-main">
+    <form  class="layui-form layui-form-pane" onsubmit="javascript:return false;">
+        <div class="layui-form-item" style="margin-bottom:0px;">
+        <div class="layui-inline">
+            #set($length=1)
+            #foreach($column in $columns)
+                #set($columnName1 = $!column.columnName + 1)
+                #set($columnName2 = $!column.columnName + 2)
+                #if($!column.queryFlag.equals("Y")&&$!column.dataType.equals("date")&&$!column.queryKind!="between")
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" name="$!column.columnName" id="$!column.columnName" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" >
+                    </div>
+                #elseif($!column.queryFlag.equals("Y")&&$!column.dataType.equals("date")&&$!column.queryKind=="between")
+                        <label class="layui-form-label">$!column.columnComment</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input"  name="$!column.columnName" id="$!column.columnName" lay-verify="date"  autocomplete="off" placeholder=" - ">
+                        </div>
+                #elseif($!column.queryFlag.equals("Y")&&$!column.dataType.equals("datetime")&&$!column.queryKind!="between")
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" name="$!column.columnName" id="$!column.columnName" lay-verify="datetime" placeholder="yyyy-MM-dd HH:mm:ss" autocomplete="off" >
+                    </div>
+                #elseif($!column.queryFlag.equals("Y")&&$!column.dataType.equals("datetime")&&$!column.queryKind=="between")
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input"  name="$!column.columnName" id="$!column.columnName" lay-verify="datetime" placeholder=" - " autocomplete="off" >
+                    </div>
+                #elseif($!column.queryFlag.equals("Y")&&$!column.dataType!="date"&&$!column.dataType!="datetime"&&$!column.queryKind!="between")
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-inline">
+                        <input type="text" onchange="javascript:$('#btn_query').click();" class="layui-input" name="$!column.columnName"  id="$!column.columnName">
+                    </div>
+                #elseif($!column.queryFlag.equals("Y")&&$!column.dataType!="date"&&$!column.dataType!="datetime"&&$!column.queryKind=="between")
+                    <label class="layui-form-label">$!column.columnComment</label>
+                    <div class="layui-input-inline">
+                        <input type="text" onchange="javascript:$('#btn_query').click();" class="new_input_line"  name="$columnName1" id="$columnName1">
+                        <input type="text" onchange="javascript:$('#btn_query').click();" class="new_input_line"  name="$columnName2" id="$columnName2">
+                    </div>
+                #end
+
+                #if($!column.queryFlag.equals("Y"))
+                    #set($length=$length+1)
+                #end
+                #if($length%3==1&&$length>3&&$!column.queryFlag.equals("Y"))
+                </div>
+                <div class="layui-inline">
+                #end
+
+            #end
+            <div class="layui-input-inline">
+                <button type="button" id="btn_query"  class="layui-btn layui-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                <button type="button" id="btn_add"  class="layui-btn layui-btn">
+                    新增
+                </button>
+            </div>
+        </div>
+    </form>
+    <table class="layui-table" id="${model}Table" lay-filter="${model}filter">
+    </table>
+    <script type="text/html" id="${model}bar">
+        <a class="layui-btn layui-btn-primary layui-btn-mini" lay-event="add" id="btn-add">新增</a>
+        <a class="layui-btn layui-btn-mini" lay-event="edit" id="btn-edit">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del" id="btn-del">删除</a>
+    </script>
+    <div class="layui-tab-item">
+        <div id="${model}page"></div>
+    </div>
+</div>
+<script type="text/javascript" src="plugins/jquery.min.js"></script>
+<script type="text/javascript" src="layui/layui.all.js"></script>
+<script type="text/javascript" src="ag/${model}/${model}list.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+
+
+
+
+
+/*打开页面动画*/
+.layui-tab-item.layui-show{ animation:moveTop 1s; -webkit-animation:moveTop 1s; animation-fill-mode:both; -webkit-animation-fill-mode:both; }
+@keyframes moveTop{
+    0% {opacity: 0;-webkit-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);}
+    100% {opacity: 1;-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
+}
+@-o-keyframes moveTop{
+    0% {opacity: 0;-webkit-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);}
+    100% {opacity: 1;-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
+}
+@-moz-keyframes moveTop{
+    0% {opacity: 0;-webkit-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);}
+    100% {opacity: 1;-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
+}
+@-webkit-keyframes moveTop{
+    0% {opacity: 0;-webkit-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);}
+    100% {opacity: 1;-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
+}
+
+
+
+
+.div-main-1{float: left;width:33%;}
+.div-main-2{float: left;width:34%;}
+.div-tab-1{margin-top: 15px;margin-left:15px;width: 96%;height: 40px;border-bottom: 1px solid #D6D6D6;background-color: white; text-align: left;line-height: 40px;border-radius:5px 5px 0 0;}
+.div-blank-1{margin-left:15px;width: 96%;height: 200px;background-color: white;border-radius:0 0 5px 5px ;}
+.div-tab-2{margin-top: 15px;margin-left:15px;width: 93%;height: 40px;border-bottom: 1px solid #D6D6D6;background-color: white; text-align: left;line-height: 40px;border-radius:5px 5px 0 0;}
+.div-blank-2{margin-left:15px;width: 93%;height: 200px;background-color: white;border-radius:0 0 5px 5px ;}
+.div-main-3{float: left;width:66%;}
+.div-tab-3{margin-top: 15px;margin-left:15px;width: 98%;height: 40px;border-bottom: 1px solid #D6D6D6;background-color: white; text-align: left;line-height: 40px;border-radius:5px 5px 0 0;}
+.div-blank-3{margin-left:15px;width: 98%;height:300px;background-color: white;border-radius:0 0 5px 5px ;}
+.div-tab-4{margin-top: 15px;margin-left:15px;width: 93%;height: 40px;border-bottom: 1px solid #D6D6D6;background-color: white; text-align: left;line-height: 40px;border-radius:5px 5px 0 0;}
+.div-blank-4{margin-left:15px;width: 93%;height:300px;background-color: white;border-radius:0 0 5px 5px ;}
+.div-tab-1-1{float: left;padding-left: 10px;}
+.div-tab-1-1-1{float: right}
+.div-tab-1-1-1-1{float: left;padding-right: 10px;cursor: pointer;}
+.div-tab-1-1-1-2{float: right;padding-right: 6px;cursor: pointer;}
+.div-blank-1-1{float: left;width: 22%;}
+.div-blank-1-1-1{width:100%;height: 60px;text-align: center;line-height: 60px;background-color: #eee;margin-left:9px;margin-top:10px;border-radius: 3px 3px 3px 3px;cursor: pointer;}
+.div-blank-1-1-2{width:100%;height: 30px;text-align: center;line-height: 30px;margin-left:9px;}
+.div-blank-1-1-1-1{line-height: 10px;padding-top: 20px;padding-left:10px;text-align: left;font-size: 10px;font-family: 新宋体;color: #9d9d9d;}
+.div-blank-1-1-1-2{line-height: 10px;padding-top: 20px;padding-left:10px;text-align: left;font-size: 30px;color: #009E94;}
+.div-blank-1-2{float: left;width: 44%;}
+.div-blank-4-1{float: left;margin-left: 15px;text-align: center;color: #0C0C0C;font-size: 30px;}
+.div-blank-4-2{float: right;margin-right: 30px;padding-top:15px;text-align: center;color: #0C0C0C;font-size: 10px;}
+.div-blank-4-3{width:90%;margin-left: 15px;margin-top: 40px;}
+.container{
+	width:335px;
+	height:7px;
+	background:#D6D6D6;
+	border-radius:3px 3px 3px 3px ;
+}
+.bar{
+	background:#1AA094;
+	float:left;
+	height:100%;
+	text-align:center;
+	line-height:150%;
+	border-radius:3px 3px 3px 3px ;
+}
+.full{
+	position: fixed;
+	align-content: center;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}

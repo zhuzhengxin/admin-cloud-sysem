@@ -1,0 +1,33 @@
+spring:
+    application:
+        name: admin-ui
+    thymeleaf:
+        mode: LEGACYHTML5
+        cache: false
+    boot:
+      admin:
+        url: http://localhost:8764/
+server:
+    port: 8766
+
+eureka:
+    instance:
+        statusPageUrlPath: ${management.context-path}/info
+        healthCheckUrlPath: ${management.context-path}/health
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+back:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+feign:
+  hystrix:
+      enabled: true

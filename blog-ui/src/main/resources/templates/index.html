@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>通用博客系统</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/global.css" media="all" />
+	<link rel="stylesheet" href="layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="css/main_new.css" media="all" />
+	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+</head>
+
+
+<body class="main_body" style="overflow-x:hidden;" >
+<div class="layui-layout layui-layout-admin">
+	<!-- 顶部 -->
+	<div class="layui-header header">
+		<div class="layui-main">
+			<a href="#" class="logo" style="top:0px;">通用博客系统</a>
+		<ul class="layui-nav layui-layout-left">
+			<li class="layui-nav-item" style="margin-left: -10px;"><a href="">首页</a></li>
+			<li class="layui-nav-item" style="margin-left: -20px;"><a href="">问答</a></li>
+			<li class="layui-nav-item" style="margin-left: -20px;"><a href="">博客</a></li>
+			<li class="layui-nav-item" style="margin-left: -20px;"><a href="">资讯</a></li>
+			<li class="layui-nav-item" style="margin-left: -20px;"><a href="">专题</a></li>
+			<!--<li class="layui-nav-item">
+				<a href="javascript:;">其它系统</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">邮件管理</a></dd>
+					<dd><a href="">消息管理</a></dd>
+					<dd><a href="">授权管理</a></dd>
+				</dl>
+			</li>-->
+			<!--<div class="layui-form component" style="color: #2B2E37">
+				<select name="modules"  lay-verify="required" lay-search="">
+					<option value="">搜索</option>
+					<option value="1">layer</option>
+					<option value="2">form</option>
+					<option value="3">layim</option>
+					<option value="4">element</option>
+					<option value="5">laytpl</option>
+					<option value="6">upload</option>
+					<option value="7">laydate</option>
+					<option value="8">laypage</option>
+					<option value="9">flow</option>
+					<option value="10">util</option>
+					<option value="11">code</option>
+					<option value="12">tree</option>
+					<option value="13">layedit</option>
+					<option value="14">nav</option>
+					<option value="15">tab</option>
+					<option value="16">table</option>
+					<option value="17">select</option>
+					<option value="18">checkbox</option>
+					<option value="19">switch</option>
+					<option value="20">radio</option>
+				</select>
+			</div>-->
+		</ul>
+			<!-- 搜索 -->
+
+			<!-- 顶部右侧菜单 -->
+			<ul class="layui-nav layui-layout-right">
+				<li class="layui-nav-item" id="showNotice" style="margin-right: -40px;" >
+					<a href="javascript:;">最新公告</a>
+				</li>
+				<li class="layui-nav-item" style="margin-right: -40px;">
+					<a href="javascript:;">注册</a>
+				</li>
+				<li class="layui-nav-item" style="margin-right: -40px;">
+					<a href="page/login/login.html" > 登录</a>
+				</li>
+				<li class="layui-nav-item" style="margin-right: -10px;">
+				<a href="javascript:;">
+					<img src="images/0.jpg" class="layui-nav-img">
+					贤心
+				</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<div>
+</div>
+
+<div class="layui-col-md11">
+	<div class="layui-row">
+    <div class="layui-col-md2" >
+	<div class="site-tree" style="margin-left: 20px;margin-top: -10px;border-right: 0px;">
+		<ul class="layui-tree" >
+
+			<li><h2>基础说明</h2></li>
+
+			<li class="site-tree-noicon layui-this">
+				<a href="/doc/">
+					<cite>开始使用</cite>
+					<em>Getting Started</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/infrastructure.html">
+					<cite>底层方法</cite>
+					<em>基础支撑</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/element.html">
+					<cite>页面元素</cite>
+					<em>规范 / 公共类 / 属性</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/modules.html">
+					<cite>模块规范</cite>
+					<em>使用 / 扩展</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/faq.html">
+					<cite>常见问题</cite>
+					<em>FAQ</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/changelog.html">
+					<cite>更新日志</cite>
+					<span class="layui-badge-dot" style="position: relative; top: -3px; left: -3px;"></span>
+				</a>
+			</li>
+			<!--<li><h2>基础说明</h2></li>
+
+			<li class="site-tree-noicon layui-this">
+				<a href="/doc/">
+					<cite>开始使用</cite>
+					<em>Getting Started</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/infrastructure.html">
+					<cite>底层方法</cite>
+					<em>基础支撑</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/element.html">
+					<cite>页面元素</cite>
+					<em>规范 / 公共类 / 属性</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/modules.html">
+					<cite>模块规范</cite>
+					<em>使用 / 扩展</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/faq.html">
+					<cite>常见问题</cite>
+					<em>FAQ</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/changelog.html">
+					<cite>更新日志</cite>
+					<span class="layui-badge-dot" style="position: relative; top: -3px; left: -3px;"></span>
+				</a>
+			</li>
+			<li><h2>基础说明</h2></li>
+
+			<li class="site-tree-noicon layui-this">
+				<a href="/doc/">
+					<cite>开始使用</cite>
+					<em>Getting Started</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/infrastructure.html">
+					<cite>底层方法</cite>
+					<em>基础支撑</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/element.html">
+					<cite>页面元素</cite>
+					<em>规范 / 公共类 / 属性</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/modules.html">
+					<cite>模块规范</cite>
+					<em>使用 / 扩展</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/faq.html">
+					<cite>常见问题</cite>
+					<em>FAQ</em>
+				</a>
+			</li>
+			<li class="site-tree-noicon ">
+				<a href="/doc/base/changelog.html">
+					<cite>更新日志</cite>
+					<span class="layui-badge-dot" style="position: relative; top: -3px; left: -3px;"></span>
+				</a>
+			</li>-->
+		</ul>
+	</div>
+	</div>
+		<div class="layui-col-md8" style="margin-left: 45px;">
+
+		<!--<h2 class="site-h1" style="margin-bottom: -5px;">最近发表</h2>-->
+			<fieldset class="layui-elem-field layui-field-title site-title">
+				<legend><a name="compatibility" style="font-size: 16px;">最近发表</a></legend>
+			</fieldset>
+		<blockquote class="layui-elem-quote" >
+			<!--<img src="images/0.jpg" style="width: 60px;height: 30px;">-->
+			<a style="font-size: 20px;font-family: Courier New;  cursor: hand;"><strong>Layui 是一款采用自身模块规范编写的情怀级前端UI框架</strong></a>
+			<div style="font-size: 10px;margin-top: 10px;margin-bottom: -15px;color: #2e6da4;">作者：doker   发布于2017-09-18 17:11:48</div>
+		</blockquote>
+		<div>
+		<p style=" text-align: left; line-height:30px;font-family: Courier New;">
+			&nbsp;&nbsp;&nbsp;&nbsp;Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架
+		</p>
+		<p style="margin-left:20px;margin-bottom:20px;margin-top:10px;font-size: 10px;color: #2e6da4;">
+			阅读(500)   标签：测试
+		</p>
+		</div>
+		<!--	<blockquote class="layui-elem-quote" >
+				&lt;!&ndash;<img src="images/0.jpg" style="width: 60px;height: 30px;">&ndash;&gt;
+				<a href="#" style="font-size: 20px;font-family: Courier New;  cursor: hand;"><strong>Layui 是一款采用自身模块规范编写的情怀级前端UI框架</strong></a>
+				<div style="font-size: 10px;margin-top: 10px;margin-bottom: -15px;color: #2e6da4;">作者：doker   发布于2017-09-18 17:11:48</div>
+			</blockquote>
+			<div>
+				<p style=" text-align: left; line-height:30px;font-family: Courier New;">
+					&nbsp;&nbsp;&nbsp;&nbsp;Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架
+				</p>
+				<p style="margin-left:20px;margin-bottom:20px;margin-top:10px;font-size: 10px;color: #2e6da4;">
+					阅读(500)   标签：测试
+				</p>
+			</div><blockquote class="layui-elem-quote" >
+			&lt;!&ndash;<img src="images/0.jpg" style="width: 60px;height: 30px;">&ndash;&gt;
+			<a href="#" style="font-size: 20px;font-family: Courier New;  cursor: hand;"><strong>Layui 是一款采用自身模块规范编写的情怀级前端UI框架</strong></a>
+			<div style="font-size: 10px;margin-top: 10px;margin-bottom: -15px;color: #2e6da4;">作者：doker   发布于2017-09-18 17:11:48</div>
+		</blockquote>
+			<div>
+				<p style=" text-align: left; line-height:30px;font-family: Courier New;">
+					&nbsp;&nbsp;&nbsp;&nbsp;Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架
+				</p>
+				<p style="margin-left:20px;margin-bottom:20px;margin-top:10px;font-size: 10px;color: #2e6da4;">
+					阅读(500)   标签：测试
+				</p>
+			</div><blockquote class="layui-elem-quote" >
+			&lt;!&ndash;<img src="images/0.jpg" style="width: 60px;height: 30px;">&ndash;&gt;
+			<a href="#" style="font-size: 20px;font-family: Courier New;  cursor: hand;"><strong>Layui 是一款采用自身模块规范编写的情怀级前端UI框架</strong></a>
+			<div style="font-size: 10px;margin-top: 10px;margin-bottom: -15px;color: #2e6da4;">作者：doker   发布于2017-09-18 17:11:48</div>
+		</blockquote>
+			<div>
+				<p style=" text-align: left; line-height:30px;font-family: Courier New;">
+					&nbsp;&nbsp;&nbsp;&nbsp;Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架
+				</p>
+				<p style="margin-left:20px;margin-bottom:20px;margin-top:10px;font-size: 10px;color: #2e6da4;">
+					阅读(500)   标签：测试
+				</p>
+			</div><blockquote class="layui-elem-quote" >
+			&lt;!&ndash;<img src="images/0.jpg" style="width: 60px;height: 30px;">&ndash;&gt;
+			<a href="#" style="font-size: 20px;font-family: Courier New;  cursor: hand;"><strong>Layui 是一款采用自身模块规范编写的情怀级前端UI框架</strong></a>
+			<div style="font-size: 10px;margin-top: 10px;margin-bottom: -15px;color: #2e6da4;">作者：doker   发布于2017-09-18 17:11:48</div>
+		</blockquote>
+			<div>
+				<p style=" text-align: left; line-height:30px;font-family: Courier New;">
+					&nbsp;&nbsp;&nbsp;&nbsp;Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架
+				</p>
+				<p style="margin-left:20px;margin-bottom:20px;margin-top:10px;font-size: 10px;color: #2e6da4;">
+					阅读(500)   标签：测试
+				</p>
+			</div><blockquote class="layui-elem-quote" >
+			&lt;!&ndash;<img src="images/0.jpg" style="width: 60px;height: 30px;">&ndash;&gt;
+			<a href="#" style="font-size: 20px;font-family: Courier New;  cursor: hand;"><strong>Layui 是一款采用自身模块规范编写的情怀级前端UI框架</strong></a>
+			<div style="font-size: 10px;margin-top: 10px;margin-bottom: -15px;color: #2e6da4;">作者：doker   发布于2017-09-18 17:11:48</div>
+		</blockquote>
+			<div>
+				<p style=" text-align: left; line-height:30px;font-family: Courier New;">
+					&nbsp;&nbsp;&nbsp;&nbsp;Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架Layui 是一款采用自身模块规范编写的情怀级前端UI框架
+				</p>
+				<p style="margin-left:20px;margin-bottom:20px;margin-top:10px;font-size: 10px;color: #2e6da4;">
+					阅读(500)   标签：测试
+				</p>
+			</div>-->
+
+
+
+</div>
+	<div class="layui-col-md2" style="margin-right: -160px;margin-left: 10px;border-left:1px solid #eee;">
+		<div style="width: 230px;height: 300px;margin-top: 10px;margin-left: 10px;margin-right: 20px;border:1px solid #eee;">
+			<fieldset class="layui-elem-field layui-field-title site-title">
+				<legend><a name="compatibility" style="font-size: 16px;">测试测试</a></legend>
+			</fieldset>
+		</div>
+		<div style="width: 230px;height: 300px;margin-top: 10px;margin-left: 10px;margin-right: 20px;border:1px solid #eee;">
+			<!--<div style="text-align: left;background-color: #eee;height: 38px;line-height: 35px;font-size: 15px;">
+				测试
+			</div>-->
+			<fieldset class="layui-elem-field layui-field-title site-title">
+				<legend><a name="compatibility" style="font-size: 16px;">测试测试</a></legend>
+			</fieldset>
+		</div>
+
+		<div style="width: 230px;height: 300px;margin-top: 10px;margin-left: 10px;margin-right: 20px;border:1px solid #eee;">
+		<fieldset class="layui-elem-field layui-field-title site-title">
+			<legend><a name="compatibility" style="font-size: 16px;">测试测试</a></legend>
+		</fieldset>
+		</div>
+	</div>
+</div>
+</div>
+<div class="layui-footer" style="text-align: center;height: 200px;border-top: 1px solid #eee; ">
+	<div class="layui-main"  >
+		<p>&copy; 2017 <a href="/">layui.com</a> MIT license</p>
+		<p>
+			<a href="http://fly.layui.com/case/2017/" target="_blank">案例</a>
+			<a href="http://fly.layui.com/jie/3147.html" target="_blank">捐赠</a>
+			<!--<a href="javascript:layer.msg('暂无此页');">关于我们</a>-->
+			<a href="mailto:xianxin@layui.com">联系</a>
+			<a href="https://github.com/sentsin/layui/" target="_blank">GitHub</a>
+			<a href="https://gitee.com/sentsin/layui" target="_blank">码云</a>
+			<a href="http://fly.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+		</p>
+	</div>
+</div>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+        layui.use('layer', function(){ //独立版的layer无需执行这一句
+            var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+            //触发事件j
+            var active = {
+                setTop: function(){
+                    var that = this;
+                    //多窗口模式，层叠置顶
+                    layer.open({
+                        type: 2 //此处以iframe举例
+                        ,title: '当你选择该窗体时，即会在最顶端'
+                        ,area: ['390px', '260px']
+                        ,shade: 0
+                        ,maxmin: true
+                        ,offset: [ //为了演示，随机坐标
+                            Math.random()*($(window).height()-300)
+                            ,Math.random()*($(window).width()-390)
+                        ]
+                        ,content: 'http://layer.layui.com/test/settop.html'
+                        ,btn: ['继续弹出', '全部关闭'] //只是为了演示
+                        ,yes: function(){
+                            $(that).click();
+                        }
+                        ,btn2: function(){
+                            layer.closeAll();
+                        }
+
+                        ,zIndex: layer.zIndex //重点1
+                        ,success: function(layero){
+                            layer.setTop(layero); //重点2
+                        }
+                    });
+                }
+                ,confirmTrans: function(){
+                    //配置一个透明的询问框
+                    layer.msg('大部分参数都是可以公用的<br>合理搭配，展示不一样的风格', {
+                        time: 20000, //20s后自动关闭
+                        btn: ['明白了', '知道了', '哦']
+                    });
+                }
+                ,notice: function(){
+                    //示范一个公告层
+                    layer.open({
+                        type: 1
+                        ,title: false //不显示标题栏
+                        ,closeBtn: false
+                        ,area: '300px;'
+                        ,shade: 0.8
+                        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                        ,btn: ['火速围观', '残忍拒绝']
+                        ,moveType: 1 //拖拽模式，0或者1
+                        ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">你知道吗？亲！<br>layer ≠ layui<br><br>layer只是作为Layui的一个弹层模块，由于其用户基数较大，所以常常会有人以为layui是layerui<br><br>layer虽然已被 Layui 收编为内置的弹层模块，但仍然会作为一个独立组件全力维护、升级。<br><br>我们此后的征途是星辰大海 ^_^</div>'
+                        ,success: function(layero){
+                            var btn = layero.find('.layui-layer-btn');
+                            btn.css('text-align', 'center');
+                            btn.find('.layui-layer-btn0').attr({
+                                href: 'http://www.layui.com/'
+                                ,target: '_blank'
+                            });
+                        }
+                    });
+                }
+                ,offset: function(othis){
+                    var type = othis.data('type')
+                        ,text = othis.text();
+
+                    layer.open({
+                        type: 1
+                        ,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                        ,id: 'layerDemo'+type //防止重复弹出
+                        ,content: '<div style="padding: 20px 100px;"><a href="#">测试哦</a><br><a href="#">测试哦</a><br><a href="#">测试哦</a></div>'
+                        //,btn: '关闭全部'
+                        ,btnAlign: 'c' //按钮居中
+                        ,shade: 0 //不显示遮罩
+                        ,yes: function(){
+                            layer.closeAll();
+                        }
+                    });
+                }
+            };
+
+            //$('#layerDemo .layui-btn').on('click', function(){
+                var othis = $('#layerDemo .layui-btn'), method = othis.data('method');
+                active[method] ? active[method].call(this, othis) : '';
+            //});
+
+        });
+	</script>
+
+</body>
+</html>
