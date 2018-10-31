@@ -88,7 +88,7 @@ Rest服务可视化
 
 ---------
 
-## 系统运行截图
+## 系统截图
 ![登录](project-bootstrap/登录.png)
 
 ![系统首页](project-bootstrap/首页.png)
