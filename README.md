@@ -76,12 +76,15 @@ Rest服务可视化
 ------------
 
 ## 启动指南
+
 ### 必用工具
+- idea开发工具
 - mysql数据库一个，redis数据库一个
 - jdk1.8
 - IDE插件一个，lombok插件，具体百度即可
+
 ### 运行步骤
-- 运行数据库脚本：依次运行数据库：admin-cloud-sysem/project-bootstrap/admin_cloud_db.sql
+- 运行数据库脚本：admin-cloud-sysem/project-bootstrap/admin_cloud_db.sql
 - 修改配置数据库配置：admin-service/src/main/resources/application.yml、generator.properties
 - 依次运行main类：CenterBootstrap（admin-center）、AdminBootstrap（admin-service）、UIBootstrap（admin-ui）、GateBootstrap（admin-gate）、MonitorBootstrap（admin-monitor）
 - 访问地址: http://localhost:8765/login  账号/密码：admin/admin
