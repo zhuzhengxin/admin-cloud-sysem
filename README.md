@@ -13,7 +13,7 @@ Admin-Cloud-System是基于Spring Cloud微服务架构实现的前后台分离�
 ------
 
 ## 项目结构
-
+``` lua
 ├─admin-cloud-sysem
 │  │
 │  ├─admin-service----------------后台服务层
@@ -28,7 +28,7 @@ Admin-Cloud-System是基于Spring Cloud微服务架构实现的前后台分离�
 │  │
 │  └─admin-api------------------公共服务接口层
 │
-
+``` 
 ------------
 ## 功能简介
 > 我的桌面
