@@ -64,7 +64,7 @@ Admin-Cloud-System是基于Spring Cloud微服务架构实现的前后台分离�
 
 基于Spring Cloud Hystrix监控功能，对系统中的微服务进行监控
 
-> Admin Druid数据监控ဆ
+> Admin Druid数据监控
 
 对数据库运行情况进行监控，包括sql运行时间，数据库性能等信息
 
