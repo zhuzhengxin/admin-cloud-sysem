@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pers.liuqing.cloudsys</groupId>
-    <artifactId>admin-cloud-sysem</artifactId>
+    <artifactId>admin-sysem-cloud</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <parent>

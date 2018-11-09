@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="admin-api" />
+        <module name="admin-center" />
+        <module name="admin-common" />
+        <module name="admin-gate" />
+        <module name="admin-monitor" />
+        <module name="admin-service" />
+        <module name="admin-ui" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-api" target="1.6" />
+      <module name="admin-center" target="1.6" />
+      <module name="admin-cloud-sysem" target="1.6" />
+      <module name="admin-common" target="1.6" />
+      <module name="admin-gate" target="1.6" />
+      <module name="admin-monitor" target="1.6" />
+      <module name="admin-service" target="1.6" />
+      <module name="admin-sys-cloud" target="1.6" />
+      <module name="admin-ui" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

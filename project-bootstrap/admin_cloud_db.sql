@@ -204,10 +204,10 @@ CREATE TABLE `base_generate` (
 -- Records of base_generate
 -- ----------------------------
 INSERT INTO `base_generate` VALUES ('1', 'base_agent', '代理商信息', 'D:/geek_qi-ace-security-master/ace-security/', 'Y', '2018-10-26 21:16:56');
-INSERT INTO `base_generate` VALUES ('2', 'base_groupmsg', '渠道基本信息', 'D:/geek_qi-ace-security-master/admin-cloud-sysem', 'Y', '2018-10-16 17:24:10');
-INSERT INTO `base_generate` VALUES ('3', 'base_testid', '1111', 'D:/geek_qi-ace-security-master/admin-cloud-sysem', 'Y', '2018-09-26 14:16:32');
-INSERT INTO `base_generate` VALUES ('4', 'base_contractinfo', '合同信息表', 'D:/geek_qi-ace-security-master/admin-cloud-sysem', 'Y', '2018-10-26 22:01:49');
-INSERT INTO `base_generate` VALUES ('5', 'base_linkman', '联系人信息', 'D:/geek_qi-ace-security-master/admin-cloud-sysem/', 'Y', '2018-10-26 22:01:15');
+INSERT INTO `base_generate` VALUES ('2', 'base_groupmsg', '渠道基本信息', 'D:/geek_qi-ace-security-master/admin-sysem-cloud', 'Y', '2018-10-16 17:24:10');
+INSERT INTO `base_generate` VALUES ('3', 'base_testid', '1111', 'D:/geek_qi-ace-security-master/admin-sysem-cloud', 'Y', '2018-09-26 14:16:32');
+INSERT INTO `base_generate` VALUES ('4', 'base_contractinfo', '合同信息表', 'D:/geek_qi-ace-security-master/admin-sysem-cloud', 'Y', '2018-10-26 22:01:49');
+INSERT INTO `base_generate` VALUES ('5', 'base_linkman', '联系人信息', 'C:\Users\DELL\Desktop\mp\Admin-System-Cloud', 'Y', '2018-10-26 22:01:15');
 
 -- ----------------------------
 -- Table structure for base_group

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="/admin/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="/admin/css/global.css" media="all">
+    <link rel="stylesheet" href="/admin/plugins/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+		<div style="margin: 15px;">
+			<form class="layui-form" action="">
+										                <div class="layui-form-item">
+                    <label class="layui-form-label">名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="name" size="125" lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            					                <div class="layui-form-item">
+                    <label class="layui-form-label">年龄</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="age" size="4" lay-verify="required" placeholder="请输入年龄" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            					                <div class="layui-form-item">
+                    <label class="layui-form-label">性别</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="six" size="22" lay-verify="required" placeholder="请输入性别" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            		                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="edit">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+			</form>
+		</div>
+<script type="text/javascript" src="/admin/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/admin/layui/layui.all.js"></script>
+<script type="text/javascript" src="/admin/ag/common/util.js"></script>
+<script type="text/javascript" src="/admin/ag/zhu/zhuadd.js"></script>
+</body>
+</html>

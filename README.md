@@ -14,7 +14,7 @@ Admin-Cloud-System是基于Spring Cloud微服务架构实现的前后台分离�
 
 ## 项目结构
 ``` lua
-├─admin-cloud-sysem
+├─admin-sysem-cloud
 │  │
 │  ├───────────admin-service----------------后台服务层
 │  │
@@ -84,7 +84,7 @@ Rest服务可视化
 - IDE插件一个，lombok插件，具体百度即可
 
 ### 运行步骤
-- 运行数据库脚本：admin-cloud-sysem/project-bootstrap/admin_cloud_db.sql
+- 运行数据库脚本：admin-sysem-cloud/project-bootstrap/admin_cloud_db.sql
 - 修改数据库配置：admin-service/src/main/resources/application.yml、generator.properties
 - 依次运行main类：CenterBootstrap（admin-center）、AdminBootstrap（admin-service）、UIBootstrap（admin-ui）、GateBootstrap（admin-gate）、MonitorBootstrap（admin-monitor）
 - 访问地址: http://localhost:8765/login  账号/密码：admin/admin

@@ -32,23 +32,23 @@
         <jdbcConnection driverClass="${generator.jdbc.driver}"
                         connectionURL="${generator.jdbc.url}"
                         userId="${generator.jdbc.username}"
-                        password="123456" />
+                        password="root" />
 
         <!-- model生成 -->
-        <javaModelGenerator targetPackage="pers.liuqing.cloudsys.admin.service.entity" targetProject="D:/geek_qi-ace-security-master/admin-cloud-sysem/admin-service/src/main/java" />
+        <javaModelGenerator targetPackage="pers.liuqing.cloudsys.admin.service.entity" targetProject="C:\Users\DELL\Desktop\mp\Admin-System-Cloud/admin-service/src/main/java" />
 
         <!-- MapperXML生成 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="D:/geek_qi-ace-security-master/admin-cloud-sysem/admin-service/src/main/resources" >
+        <sqlMapGenerator targetPackage="mapper" targetProject="C:\Users\DELL\Desktop\mp\Admin-System-Cloud/admin-service/src/main/resources" >
             <property name="modelOnly" value="true" />
         </sqlMapGenerator>
 
         <!-- Mapper接口生成 -->
-        <javaClientGenerator targetPackage="pers.liuqing.cloudsys.admin.service.mapper" targetProject="D:/geek_qi-ace-security-master/admin-cloud-sysem/admin-service/src/main/java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="pers.liuqing.cloudsys.admin.service.mapper" targetProject="C:\Users\DELL\Desktop\mp\Admin-System-Cloud/admin-service/src/main/java" type="XMLMAPPER" />
 
         <!-- 需要映射的表 -->
         <!-- 需要映射的表 -->
                                     <table  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
-                       enableSelectByExample="false" selectByExampleQueryId="false" enableInsert="false"  enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false"  tableName="base_groupmsg"  domainObjectName="Groupmsg">
+                       enableSelectByExample="false" selectByExampleQueryId="false" enableInsert="false"  enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false"  tableName="user_zhu"  domainObjectName="Zhu">
 
 
 

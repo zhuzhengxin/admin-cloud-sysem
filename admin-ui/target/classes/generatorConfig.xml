@@ -35,15 +35,15 @@
                         password="123456" />
 
         <!-- model生成 -->
-        <javaModelGenerator targetPackage="pers.liuqing.cloudsys.admin.ui.entity" targetProject="D:/geek_qi-ace-security-master/admin-cloud-sysem//admin-ui/src/main/java" />
+        <javaModelGenerator targetPackage="pers.liuqing.cloudsys.admin.ui.entity" targetProject="C:\Users\DELL\Desktop\mp\Admin-System-Cloud//admin-ui/src/main/java" />
 
         <!-- MapperXML生成 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="D:/geek_qi-ace-security-master/admin-cloud-sysem//admin-ui/src/main/resources" >
+        <sqlMapGenerator targetPackage="mapper" targetProject="C:\Users\DELL\Desktop\mp\Admin-System-Cloud//admin-ui/src/main/resources" >
             <property name="modelOnly" value="true" />
         </sqlMapGenerator>
 
         <!-- Mapper接口生成 -->
-        <javaClientGenerator targetPackage="pers.liuqing.cloudsys.admin.ui.mapper" targetProject="D:/geek_qi-ace-security-master/admin-cloud-sysem//admin-ui/src/main/java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="pers.liuqing.cloudsys.admin.ui.mapper" targetProject="C:\Users\DELL\Desktop\mp\Admin-System-Cloud//admin-ui/src/main/java" type="XMLMAPPER" />
 
         <!-- 需要映射的表 -->
         <!-- 需要映射的表 -->

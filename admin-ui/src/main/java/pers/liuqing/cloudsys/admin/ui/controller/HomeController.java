@@ -122,4 +122,8 @@ public class HomeController {
     public String groupmsg(){return "groupmsg/list";}
     @RequestMapping(value = "groupmsg/edit",method = RequestMethod.GET)
     public String groupmsgEdit(){return "groupmsg/edit";}
+    @RequestMapping(value = "zhu",method = RequestMethod.GET)
+    public String zhu(){return "zhu/list";}
+    @RequestMapping(value = "zhu/edit",method = RequestMethod.GET)
+    public String zhuEdit(){return "zhu/edit";}
 }
